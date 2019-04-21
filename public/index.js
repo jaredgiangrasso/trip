@@ -21,6 +21,7 @@ updatePath = () => {
 	let loremPicPos = scrollPercentage * 10 + 2;
 	loremPic.style.top = loremPicPos + '%';
 	let ipsumPicPos = scrollPercentage * 10 + 25;
+	console.log(ipsumPicPos);
 	ipsumPic.style.top = ipsumPicPos + '%';
 	let dolorPicPos = scrollPercentage * 10 + 47;
 	dolorPic.style.top = dolorPicPos + '%';
