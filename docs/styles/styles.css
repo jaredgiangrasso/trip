@@ -1,40 +1,19 @@
+@import 'header.css';
+
 body {
   margin: 0;
   font-family: Arial;
 }
 
 .App {
-  overflow: hidden;
+
+  position: relative;
+  height: 4000px;
   max-height: 4000px;
-}
-
-header {
-  font-size: 20px;
-  display: block;
-  width: 100%;
-  position: absolute; 
-  padding-top: 15px;
-  background: black;
-  height: 55px;
-  box-sizing: border-box;
-  z-index: 2;
-}
-
-#navbar-wrapper {
-  width: 50%;
-  margin: 0 auto;
-}
-
-#navbar {
-  display: flex;
-  justify-content: space-between;
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-
-#navbar li a {
-  color: white;
+  display: grid;
+  grid-template-rows: 55px 1fr;
+  grid-template-areas: 'header'
+                       'content';
 }
 
 a {
@@ -43,8 +22,8 @@ a {
 }
 
 .background{
-  transform: translate3d(0,0,0);
-  position: absolute;
+  position: relative;
+  grid-area: content;
   text-align: center;
   height: 4000px;
   width: 100%;
@@ -54,71 +33,78 @@ a {
   z-index: -1;
 }
 
+.background::after {
+  content: '';
+  background-color: black;
+  grid-area: content;
+  position: absolute;
+  height: 4000px;
+  width: 100%;
+  max-width: 100%;
+  left: 0;
+  opacity: .35;
+}
+
 path{
-  transform: scale(1.2);
+  transform: scale(1.4);
   opacity: .5;
+  position: relative;
 }
 
 svg {
   position: relative;
+  grid-area: content;
   filter: drop-shadow(7px 7px 3px rgba(0, 0, 0, .5));
   z-index: 1;
+  max-width: 100%;
 }
 
 #content{
-  top: 75px;
+  top: 55px;
   left: 0;
   width: 100%;
   height: 3925px;
-  position: absolute;
+  position: relative;
+  grid-area: content;
 }
 
 #loremPic {
-  margin-right: 15px;
-  height: 400px;
-  float: left;
-  filter: grayscale(25%);
-  filter: hue-rotate(10deg);
+  width: 40%;
+  position: absolute;
+  z-index: 1;
+  left: 10%;
+  top: 2%;
 }
 
 #ipsumPic {
-  position: relative;
-  float: right;
-  height: 400px;
+  width: 20%;
+  position: absolute;
+  z-index: 1;
+  right: 30%;
+  top: 25%;
 }
 
 #dolorPic {
-  height: 400px;
-  float: left;
+  width: 40%;
+  position: absolute;
+  left: 10%;
   margin-right: 15px;
+  z-index: 1;
 }
 
 #lorem {
-  background: white;
-  right: 0;
-  left: 10%;
-  position: absolute;
+  position: relative;
   top: 4%;
-  padding: 1.2% 3% 1.2% 1.2%;
 }
 
 #ipsum {
-  text-align: left;
-  background: white;
-  right: 10%;
-  left: 0;
-  position: absolute;
-  top: 30%;
-  padding: 1.2% 1.2% 1.2% 3%;
+  position: relative;
+  top: 20%;
 }
 
 #dolor {
-  background: white;
-  right: 0;
-  left: 10%;
-  position: absolute;
-  top: 53%;
-  padding: 1.2% 3% 1.2% 1.2%;
+  position: relative;
+  top: 36%;
 }
 
 #loremText,
@@ -126,6 +112,36 @@ svg {
 #ipsumText {
   font-size: 15px;
   margin: 0;
+}
+
+#loremText-wrapper {
+  background: white;
+  padding: 20px 30px 30px 100px;
+  margin-top: 5%;
+  width: 50%;
+  left: 45%;
+  position: relative;
+  box-sizing: border-box;
+}
+
+#ipsumText-wrapper {
+  background: white;
+  padding: 20px 100px 30px 30px;
+  margin-top: 100px;
+  width: 50%;
+  position: relative;
+  left: 5%;
+  box-sizing: border-box;
+}
+
+#dolorText-wrapper {
+  background: white;
+  padding: 20px 30px 30px 100px;
+  margin-top: 100px;
+  width: 50%;
+  position: relative;
+  left: 45%;
+  box-sizing: border-box;
 }
 
 #form {

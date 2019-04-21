@@ -1,0 +1,27 @@
+header {
+  font-size: 20px;
+  display: block;
+  position: relative;
+  padding-top: 15px;
+  background: black;
+  grid-area: header;
+  box-sizing: border-box;
+  z-index: 2;
+}
+
+#navbar-wrapper {
+  width: 50%;
+  margin: 0 auto;
+}
+
+#navbar {
+  display: flex;
+  justify-content: space-between;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+#navbar li a {
+  color: white;
+}
