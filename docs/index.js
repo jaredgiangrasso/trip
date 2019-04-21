@@ -6,7 +6,6 @@ let path = document.querySelector('#path');
 let loremPic = document.querySelector('#loremPic');
 let ipsumPic = document.querySelector('#ipsumPic');
 let dolorPic = document.querySelector('#dolorPic');
-// Get length of path... ~577px in this demo
 let pathLength = path.getTotalLength();
 
 
@@ -14,7 +13,7 @@ path.style.strokeDasharray = pathLength + ' ' + pathLength;
 path.style.strokeDashoffset = pathLength;
 
 updatePath = () => {
-	let scrollPercentage = (document.documentElement.scrollTop + document.body.scrollTop)*.9 / (document.documentElement.scrollHeight - document.documentElement.clientHeight);
+	let scrollPercentage = (document.documentElement.scrollTop + document.body.scrollTop) * .85 / (document.documentElement.scrollHeight - document.documentElement.clientHeight);
 	let drawLength = pathLength * scrollPercentage;
 	path.style.strokeDashoffset = pathLength - drawLength;
 
