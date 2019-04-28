@@ -1,0 +1,48 @@
+#loremText-wrapper {
+  background: white;
+  padding: 20px 30px 30px 100px;
+  margin-top: 5%;
+  width: 50%;
+  left: 45%;
+  position: relative;
+  box-sizing: border-box;
+}
+
+#lorem {
+  position: relative;
+  top: 4%;
+}
+
+#loremPic {
+  width: 40%;
+  max-width: 800px;
+  position: absolute;
+  z-index: 1;
+  left: 8%;
+  top: 4%;
+}
+
+
+@media only screen and (max-width: 900px){
+	#loremPic{
+		display: block;
+		position: relative;
+		margin: 0 auto;
+		margin-top: -70px;
+		width: 100%;
+		left: 0;
+		top: 0;
+	}
+
+	#loremText-wrapper{
+		margin-top: 0;
+		left: 0;
+		width: 100%;
+		padding: 25px 10px 30px 30px;
+	}
+
+	#lorem {
+		top: 0;
+		margin-bottom: 5%;
+	}
+}

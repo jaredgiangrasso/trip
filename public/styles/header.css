@@ -7,6 +7,7 @@ header {
   grid-area: header;
   box-sizing: border-box;
   z-index: 2;
+  border-bottom: 1px solid orange;
 }
 
 #navbar-wrapper {
@@ -24,4 +25,10 @@ header {
 
 #navbar li a {
   color: white;
+}
+
+@media only screen and (max-width: 900px){
+  #navbar-wrapper {
+    width: 80%;
+  }
 }
